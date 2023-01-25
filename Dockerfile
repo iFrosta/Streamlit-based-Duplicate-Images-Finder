@@ -10,7 +10,7 @@ ADD . /app
 
 # Install dependencies
 RUN pip install -r requirements.txt
-RUN apt-get update
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 libxrender-dev  -y
 
 # Expose port 
 ENV PORT 8501
